@@ -91,6 +91,7 @@ int main() {
     std::queue<std::pair<int,std::string>> words_down;
 
     getWords(test,words_across,words_down); //O(rows*cols)
+
 	std::cout<<"\n#############\n"<<"CrossWord:"<<std::endl;
 	std::cout<<test.printCross();
     std::cout<<"\n#############\n"<<"Words Across:"<<std::endl;
