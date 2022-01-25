@@ -91,17 +91,17 @@ int main() {
     std::queue<std::pair<int,std::string>> words_down;
 
     getWords(test,words_across,words_down); //O(rows*cols)
-
-
-    std::cout<<"########\n"<<"Words Across:\n"<<std::endl;
+	std::cout<<"\n#############\n"<<"CrossWord:"<<std::endl;
+	std::cout<<test.printCross();
+    std::cout<<"\n#############\n"<<"Words Across:"<<std::endl;
     while(!words_across.empty()){
-        std::cout<<std::to_string(words_across.front().first)<<" : "<<words_across.front().second<<std::endl;
+        std::cout<<"    "<<std::to_string(words_across.front().first)<<" : "<<words_across.front().second<<std::endl;
         words_across.pop();
     }
 
-    std::cout<<"########\n"<<"Words Down:\n";
+    std::cout<<"\n##############\n"<<"Words Down:\n";
     while(!words_down.empty()){
-        std::cout<<std::to_string(words_down.front().first)<<" : "<<words_down.front().second<<std::endl;
+        std::cout<<"    "<<std::to_string(words_down.front().first)<<" : "<<words_down.front().second<<std::endl;
         words_down.pop();
     }
 }

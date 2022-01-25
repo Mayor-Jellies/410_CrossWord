@@ -31,12 +31,12 @@ crossword::crossword(const unsigned int &r, const unsigned int &c, const std::st
 	}
 }
 
-__attribute__((unused)) std::string crossword::printCross() const {
+std::string crossword::printCross() const {
 	std::stringstream out;
-	out << "Rows: " << rows << "\n";
-	out << "Columns: " << cols << "\n";
+	out << "    Rows: " << rows << "\n";
+	out << "    Columns: " << cols << "\n";
 	for ( int i = 0; i < rows; i++ ) {
-		out << std::string(cross[i].begin(), cross[i].end()) << '\n';
+		out <<"         "<<(cross[i].data()) << '\n';
 	}
 	return out.str();
 }
