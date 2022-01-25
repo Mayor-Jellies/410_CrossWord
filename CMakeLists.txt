@@ -3,4 +3,4 @@ project(CrossWord)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(CrossWord main.cpp)
+add_executable(CrossWord main.cpp crossword.cpp crossword.h)
